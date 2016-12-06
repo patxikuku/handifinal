@@ -1,10 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends "base.html" %}
+{% block title %}Categories{% endblock %}
+{% block content %}
+    <div class="container" style="padding-top: 50px">
+        <ol class="breadcrumb">
+            <li><a href="/">Home</a></li>
+            <li class="active">Categories</li>
+        </ol>
+
+        <div class="jumbotron">
+            <h1>Catégories</h1>
+
+            <p>Les technologies sont filtrées grâce à 3 catégories
+            <ul>
+                <li><a href="/categories/assistance">Assistance</a></li>
+                <li><a href="/categories/fonctions">Fonctions</a></li>
+                <li><a href="/categories/techno">Technologie</a></li>
+            </ul>
+
+        </div>
+    </div>
+
+{% endblock %}

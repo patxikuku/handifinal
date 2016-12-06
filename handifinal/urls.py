@@ -15,7 +15,17 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from bdat import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^$', views.home, name='home'),
+    url(r'^about$', views.about, name='about'),
+    url(r'^contact$', views.contact, name='contact'),
+    url(r'^categories/$', views.categories, name='categories'),
+    url(r'^categories/assistance$', views.categorya, name='assistance'),
+    url(r'^categories/fonctions$', views.categoryf, name='fonctions'),
+    url(r'^techno/1/$', views.technology, name='technology'),
+    url(r'^techno/2/$', views.technology_, name='technology2'),
+
 ]

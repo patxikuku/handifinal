@@ -4,81 +4,36 @@
     <div class="container" style="padding-top: 50px">
         <ol class="breadcrumb">
             <li><a href="/">Home</a></li>
-            <li class="active">Categories</li>
+            <li class=""><a href="/categories">Categories</a></li>
+            <li class="active">{{ titre }}</li>
+
         </ol>
 
         <div class="jumbotron">
-            <h1>Les catégories</h1>
+            <h1>{{ titre }}</h1>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquid, aperiam eos itaque nam
-                necessitatibus possimus repudiandae sunt ut velit. Asperiores earum eos et excepturi porro quidem
-                quo
-                temporibus voluptatibus.</p>
+            <p>Cette catégorie présente les différents attributs de la classe {{ titre }}. Il existe {{ nb_attributs }}
+                attributs différents dans cette catégorie.
+            </p>
         </div>
 
         <div class="row">
-            <div class="col-md-4">
-                <div class="thumbnail">
-                    <div class="caption"><h3>Thumbnail label</h3>
-                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta
-                            gravida at
-                            eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                        <p><a href="#" class="btn btn-primary" role="button">Button</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="thumbnail">
-                    <div class="caption"><h3>Thumbnail label</h3>
-                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta
-                            gravida at
-                            eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                        <p><a href="#" class="btn btn-primary" role="button">Button</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="thumbnail">
-                    <div class="caption"><h3>Thumbnail label</h3>
-                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta
-                            gravida at
-                            eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                        <p><a href="#" class="btn btn-primary" role="button">Button</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="thumbnail">
-                    <div class="caption"><h3>Thumbnail label</h3>
-                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta
-                            gravida at
-                            eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                        <p><a href="#" class="btn btn-primary" role="button">Button</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="thumbnail">
-                    <div class="caption"><h3>Thumbnail label</h3>
-                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta
-                            gravida at
-                            eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                        <p><a href="#" class="btn btn-primary" role="button">Button</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="thumbnail">
-                    <div class="caption"><h3>Thumbnail label</h3>
-                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta
-                            gravida at
-                            eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                        <p><a href="#" class="btn btn-primary" role="button">Button</a>
-                    </div>
-                </div>
-            </div>
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th>Nom d'attribut</th>
+
+                </tr>
+                </thead>
+                <tbody>
+                {% for att in attributs %}
+                    <tr>
+                        <td>{{ att }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+
         </div>
 
 

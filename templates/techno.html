@@ -1,10 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends "base.html" %}
+{% block title %}Categories{% endblock %}
+{% block content %}
+    <div class="container" style="padding-top: 50px">
+        <ol class="breadcrumb">
+            <li><a href="/">Home</a></li>
+            <li class=""><a href="/categories">Categories</a></li>
+            <li class="active">{{ titre }}</li>
+
+        </ol>
+
+        <div class="row">
+            <h1>{{ att.nom }}</h1>
+            <hr>
+
+            <h3>Description</h3>
+            <p>
+                {{ att.description }}
+            </p>
+
+            <h3>Mobilité</h3>
+            <p>
+                {{ att.mobility }}
+            </p>
+
+            <h3>Langue de la technologie :</h3>{{ att.languages }}
+
+            <h3>Type d'environnement</h3>
+            <p>
+                {{ att.type_environnement }}
+            </p>
+
+            <h3>Type d'âge</h3>
+            <p>
+                {{ att.type_age }}
+            </p>
+
+            <h3>Tags</h3>
+            <p>
+                {{ att.tags }}
+            </p>
+        </div>
+{% endblock %}
