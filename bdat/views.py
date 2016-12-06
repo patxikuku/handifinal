@@ -32,13 +32,6 @@ def contact(request):
     return render_to_response("contact.html")
 
 
-def search_cat():
-    """
-    search_cat propose une page permettant à l'utilisateur de selectionner
-    par une suite de listes déroulantes
-    :return:
-    """
-
 
 def categorya(request):
     queryset = Technology.objects.all()
